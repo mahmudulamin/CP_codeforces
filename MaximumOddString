@@ -1,0 +1,17 @@
+class Solution {
+public:
+    string maximumOddBinaryNumber(string s) {
+        //last positioned bolte ekhane string er dan theke bujhano hoise...
+        sort(s.rbegin(),s.rend());
+        for ( int i = s.size()-1;i>=0;i--)
+        {
+            if(s[i]=='1')
+            {
+                swap(s[i],s[s.size()-1]);//ei line ta dan dik theke jei one ta pabe setar sathe last position swap kore dibe
+            }
+        }
+        return s;
+                //rbegin and rend boro theke soto sort kore...
+
+    }
+};
