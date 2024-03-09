@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int pivotInteger(int n) {
+       int sum_1 = 0 ;
+       int sum_2 = 0 ;
+       for(int i=n;i>=1;i--)
+       {
+           sum_1 = (i*(i+1))/2;
+           sum_2 += i;
+           if(sum_1 == sum_2)
+           {
+               return i;
+           }
+       }
+       return -1;
+    }
+};
+//prblm ta khub e easy.First a 2 ta sum rakhar jnno variable declare korbo.then for loop dia ulta theke sum ber korbo sobgula number er.
+//then arekta variable er modde ulta dik theke just n er value gula jog korte thakbe..
+//jokhn soman hobe tokhn oi i er value ta return kore dibo...
