@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int maximum69Number (int num) {
+        string result = to_string(num);
+        for(int i=0 ;i<result.size();i++)
+        {
+            if(result[i]=='6')
+            {
+                result[i]='9';
+                break;
+            }
+            //simple logic bam theke dan dik a jeidike age 6 pabo oita k 9 kore dibo just.
+        }
+        return stoi(result);
+    }
+};
