@@ -9,6 +9,8 @@ public:
                 result[i]='9';
                 break;
             }
+            //eikhane string use korar karon holo ekta number er every chracter check kora lagbe.
+            //and to_string use kore oi number ta k string a neoa hoice,last a stoi function dia string theke number a neoa hoice.
             //simple logic bam theke dan dik a jeidike age 6 pabo oita k 9 kore dibo just.
         }
         return stoi(result);
