@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
+        //sundr ekta problem..
+        //ekta array deoa ache..
+        //array er ekta element theke onngula koto soto seta check korte hobe..
+        //koto gula element soto seta ber korte hobe and array te print korte hobe.
+        int n = nums.size();
+        vector<int>answer;
+        //int count = 0;
+        for(int i = 0;i<n;i++)
+        {
+            int count = 0;           // int a = nums[i];
+            for(int j=0;j<n;j++)
+            {
+                if(nums[j]<nums[i])
+                {
+                    count++;
+                }
+            }
+            answer.push_back(count);
+        }
+        return answer;
+    }
+};
