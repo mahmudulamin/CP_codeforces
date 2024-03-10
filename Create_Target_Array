@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
+        int n = nums.size();
+        vector<int>target_array;
+        for(int i=0;i<n;i++)
+        {
+            target_array.insert(target_array.begin()+index[i],nums[i]);
+        }
+        return target_array;
+    }
+};
+//ei prblem tay nums array and index array theke targeted array print korte bolse..
+//eitar complexity holo O(n^2).
+//insert function er complexity holo O(n).
