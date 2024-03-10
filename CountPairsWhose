@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int countPairs(vector<int>& nums, int target) {
+        //khub sundr ekta problem..
+        //binary search apply koreo kora jay..
+        //two pointer apply koreo kora jay..
+        sort(nums.begin(),nums.end());
+        int r = nums.size()-1;//to store the right element of the array..
+        int l = 0;
+        int count = 0;
+        while(l<r)//loop cholbe joto somoy porjnto l ,r er theke boro ba soman na hoy
+        {
+            if(nums[l]+nums[r]<target)
+            {
+                count += r-l;
+                l++;
+            }
+            else
+            {
+                r--;
+            }
+        }
+        return count;
+        
+    }
+};
