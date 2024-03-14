@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int commonFactors(int a, int b) {
+        int n = min(a,b);
+        int answer = 0;
+        for(int i =  1;i<=n;i++)
+        {
+            if(a%i==0 and b%i ==0)
+            {
+                answer++;
+            }
+        }
+        return answer;
+    }
+};
+//eikhane surute soto number ta ber kore oi porjnto loop chalabo.
+//then sto number porjnto amra check korbo j kon kon value dia divisible hoy..
