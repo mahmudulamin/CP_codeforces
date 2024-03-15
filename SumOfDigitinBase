@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int sumBase(int n, int k) {
+        int sum = 0;
+        int remainder = 0;
+        int i =1,result=0;
+        while(n>0)
+        {
+            remainder = n% k;
+            result += (remainder* i);
+            n /=k;
+            i *=10;
+        }
+        while(result>0)
+        {
+            sum += result%10;
+            result /= 10;
+        }
+        return sum;
+    }
+};
