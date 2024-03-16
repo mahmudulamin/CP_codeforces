@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<int> sumZero(int n) {
+        //ei problem tay ekta array print korte hobe jno array er element gular sum=0 hoy..
+        //ejnno first check korbo number ta even naki odd..then just implement korbo..
+        //push_back() sesh a element add kore..
+        //insert element nirdishto range a kore..
+        vector<int>v;
+        int x = 1;
+        for(int i=0;i<n/2;i++)
+        {
+            v.push_back(x);
+            v.insert(v.begin(),-x);
+            x++;
+        }
+        if(n%2!=0)
+        {
+            v.push_back(0);
+        }
+        return v;
+    }
+};
