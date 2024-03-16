@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool isSameAfterReversals(int num) {
+        //eita khub e easy ekta problem..
+        //10 dia divide kora jay emn number sara baki sob number e 2 times reverse korle samehoy..
+        if(num<10)
+        {
+            return true;
+        }
+        if(num%10==0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+};
