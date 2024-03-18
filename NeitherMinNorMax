@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int findNonMinOrMax(vector<int>& nums) {
+        //khub e sohoj ekta prblm..sort korleo hoy..na korleo hoy..
+        //size 2 er theke boro hoilei hoy..
+        int n= nums.size();
+        sort(begin(nums),end(nums));
+        if(n==1 || n==1 || n==2)
+        {
+            return -1;
+        }
+        else
+        {
+            return nums[1];
+        }
+    }
+};
