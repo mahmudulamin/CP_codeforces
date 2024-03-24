@@ -1,0 +1,7 @@
+class Solution {
+public:
+    bool isStrictlyPalindromic(int n) {
+        //there is no number who is strictly palindrome number.So return false
+        return false;
+    }
+};
