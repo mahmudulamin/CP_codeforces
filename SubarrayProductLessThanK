@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int numSubarrayProductLessThanK(vector<int>& nums, int k) {
+        int n = nums.size();
+        int count = 0;
+        if (k <= 1) {
+            return 0;
+        }
+        int l = 0;
+        int r = 0;
+        int product = 1;
+        while (r < n) {
+            product *= nums[r];
+            while (product >= k) {
+                product /= nums[l++];
+            }
+            count += 1 + (r - l);
+            r++;
+        }
+        return count;
+    }
+};
+//khub e shundor ekta problem..
+//ekta array te koyta combination possible jadr multiplication 
+//targeted number theke soto..
