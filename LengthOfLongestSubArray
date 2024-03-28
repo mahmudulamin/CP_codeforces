@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int maxSubarrayLength(vector<int>& nums, int k)
+{
+        //problem tay ekta array deoa thakbe..
+        //k er value ja deoa thkbe oita holo occurrance 
+        //k occurrance dia maximum koto length er substring ber kora jay setai ber korte hobe..
+        int n = nums.size();
+        int count = 0 ;
+        int l  = 0 ;
+        int r = 0;
+        unordered_map<int,int>map;
+       while(l<n && r<n)
+       {
+           map[nums[r]]++;
+           while(map[nums[r]]>k)
+          {
+             map[nums[l]]--;
+             l++;
+          }
+          count = max(count,r-l+1);
+          r++;
+       }
+        return count;
+    }
+};
+//sliding window approach..
