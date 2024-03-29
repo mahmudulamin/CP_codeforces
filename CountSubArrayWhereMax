@@ -1,0 +1,22 @@
+class Solution {
+public:
+    long long countSubarrays(vector<int>& nums, int k) {
+        long long int n = size(nums);
+        long long int count =0;
+        long long int MX = *max_element(nums.begin(),nums.end());
+        long long int l=0;
+        long long int r=0;
+        while(r<n)
+        {
+            k -=(nums[r++]==MX);
+            while(k==0)
+            {
+                k += (nums[l++]==MX);
+            }
+            count += l;
+        }
+        return count;
+
+
+    }
+};
