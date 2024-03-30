@@ -1,0 +1,31 @@
+class Solution {
+public:
+
+    int MyFunc(vector<int>& nums,int k)
+    {
+        unordered_map<int,int>mp;
+        int count = 0;
+        int l=0;
+        int r=0;
+        while(r<nums.size())
+        {
+            mp[nums[r]]++;
+            while(l<=r && mp.size()>k)
+            {
+                if(--mp[nums[l]]==0)
+                mp.erase(nums[l]);
+                l++;
+            }
+            count +=(r-l+1);
+            r++;
+        }
+        return count;
+    }
+
+
+    int subarraysWithKDistinct(vector<int>& nums, int k) {
+        return MyFunc(nums,k)-MyFunc(nums,k-1);
+
+    }
+};
+//sliding window er problem eita...
