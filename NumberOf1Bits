@@ -1,6 +1,15 @@
 class Solution {
 public:
     int hammingWeight(int n) {
-        return __builtin_popcount(n);
+        //first approach holo built in function use kore jeta just return line likhlei hoy..
+      //  return __builtin_popcount(n);
+        //another approach niche deoa hoilo
+        int sum =0;
+        while(n!=0)
+        {
+            sum += n;
+            n /=2;
+        }
+        return sum;
     }
 };
