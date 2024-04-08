@@ -1,0 +1,24 @@
+class Solution {
+public:
+    vector<int> countBits(int n) {
+       // int sum = 0;
+        vector<int>ans;
+        for(int i =0;i<=n;i++)
+        {
+            int num = i;
+            int sum = 0;
+            while(num>0)
+            {
+                sum += num%2;
+                num /=2;
+            }
+            ans.push_back(sum);
+
+        }
+        return ans;
+    
+    }
+};
+//eikhane sum ta loop er modde declare kora lagbe.
+//karon loop er modde protita i er jnno sum kaj korbe..
+//loop er baire declare korle total sum print korbe..eijnno WA ashbe..
