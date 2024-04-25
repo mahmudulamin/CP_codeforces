@@ -1,0 +1,42 @@
+vector<int>dp(10005,-1);
+class Solution {
+public:
+
+
+int solve(int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    if(dp[n]!=-1)
+    {
+        return dp[n];
+    }
+    int res = 1e9;
+    for(int i = 1;i*i<=n;i++)
+    {
+        int mal = i*i;
+        int count = 1 + solve(n-mal);
+        res = min(res,count);
+    }
+    return dp[n] = res;
+}
+    int numSquares(int n) {
+       /** if(n==0)
+        {
+            return 0;
+        }
+        int Mi = INT_MAX;
+        for(int i=1;i*i<=n;i++)
+        {
+            int squ = i*i;
+            int ans = 1 + numSquares(n - squ);
+            Mi=min(Mi,ans);
+        }
+        return Mi;
+        **/
+        return solve(n);
+       
+    }
+};
