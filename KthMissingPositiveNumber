@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int findKthPositive(vector<int>& arr, int k) {
+        int n = arr.back();
+        int missing = 0;
+        int  index = 0;
+        for(int i=1;i<=n;i++)
+        {
+            if(arr[index]==i)
+            {
+                index++;
+            }
+            else
+            {
+                missing ++;
+            }
+            if(missing == k)
+            {
+                return i;
+            }
+        }
+        return n+k-missing;
+    }
+};
+//eikhane last value ta drkr not total size..
+//thats why eikhane back() function use kora hoise..
