@@ -1,0 +1,37 @@
+class Solution {
+public:
+    int specialArray(vector<int>& nums) {
+        int n = size(nums) ;
+        int left = 1;
+        int right = n ;
+        while(left<=right)
+        {
+            int count = 0;
+            int mid_val =(left+right)/2;
+            for(int i =0;i<n;i++)
+            {
+                if(nums[i]>=mid_val)
+                {
+                    count++;
+                }
+
+            } 
+            if(mid_val==count)
+            {
+                return mid_val ;
+            }
+            if(mid_val > count)
+            {
+                right = mid_val-1;
+            }
+            else
+            {
+                left = mid_val+1;
+            }
+        }
+        return -1;
+    }
+};
+//ei problem tay exactly bolse j array te koto gula number ache jara oi sonkha theke boro/somn..
+//and soman..
+//jemon 2,3,4,3 ei array te 3 ta number ache jara 3 er soman ba boro
