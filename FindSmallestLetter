@@ -23,7 +23,7 @@ public:
         }
         return letters[left];
         **/
-        //Another approaches..
+        //Another approaches....
         auto ch = upper_bound(begin(letters),end(letters),target);
         if(ch == end(letters))
         {
