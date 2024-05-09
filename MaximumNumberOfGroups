@@ -1,0 +1,38 @@
+#define ll long long 
+class Solution {
+public:
+    int maximumGroups(vector<int>& grades) {
+       /**
+        ll n = grades.size() ;
+        ll left = 0;
+        ll right = n;
+        ll max_groups = 1; 
+        //sort(grades.begin(),grades.end());
+        while(left<=right)
+        {
+            ll mid = (left + right) /2;
+            //uporer line ta k mid= (left+right)>>1 ei vhabe likha jay;
+            ll res = (mid*(mid+1))/2;
+            if(res<=n)
+            {
+                max_groups = mid ;
+                left = mid + 1;
+            }
+            else
+            {
+                right = mid - 1;
+            }
+           // return max_groups;
+
+        }
+        return max_groups;
+        **/
+        int n = grades.size();
+        return (int)((sqrt(8*n+1)-1)/2);
+
+    }
+    
+};
+
+
+//uporer eita holo math approach..
