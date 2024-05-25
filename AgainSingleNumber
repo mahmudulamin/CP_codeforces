@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        unordered_set<int> numSet;
+        for(int i:nums)//ei line ta every element iterate kore just normal for loop er moto.
+        {
+            if (numSet.find(i) == numSet.end()) 
+            {
+                numSet.insert(i);
+            }
+            else
+            {
+                numSet.erase(i);
+            }
+        }
+        return *numSet.begin();
+    }
+};
